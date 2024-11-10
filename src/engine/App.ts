@@ -1,6 +1,6 @@
 import { AppConfig } from "./AppBuilder";
 
-export class App {
+export abstract class App {
     gpu: GPU;
     adapter: GPUAdapter;
     device: GPUDevice;
@@ -15,9 +15,9 @@ export class App {
         this.context = config.context;
     }
 
-    run(): void
+    abstract run(): void
 
-    update() : void
+    abstract update() : void
 
-    render() : void
+    abstract render() : void
 }
